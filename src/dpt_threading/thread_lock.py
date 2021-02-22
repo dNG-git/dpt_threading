@@ -20,8 +20,8 @@ https://www.direct-netware.de/redirect?licenses;mpl2
 from threading import Event, RLock
 from time import time
 
+from dpt_runtime.exceptions import IOException
 from dpt_settings import Settings
-from dpt_runtime.io_exception import IOException
 
 class ThreadLock(object):
     """

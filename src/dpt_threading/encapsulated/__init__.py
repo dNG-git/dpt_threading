@@ -17,7 +17,4 @@ https://www.direct-netware.de/redirect?licenses;mpl2
 #echo(__FILEPATH__)#
 """
 
-from .event import Event
-from .instance_lock import InstanceLock
-from .result_event import ResultEvent
-from .thread_lock import ThreadLock
+from .thread import Thread

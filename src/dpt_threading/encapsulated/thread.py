@@ -19,18 +19,18 @@ https://www.direct-netware.de/redirect?licenses;mpl2
 
 from threading import Thread as _Thread
 
-from dpt_logging.log_line import LogLine
-from dpt_runtime.exception_log_trap import ExceptionLogTrap
+from dpt_logging import ExceptionLogTrap, LogLine
 
 class Thread(_Thread):
     """
-"Thread" represents a deactivatable Thread implementation.
+"Thread" represents an extended thread implementation encapsulating
+exceptions in a log trap for graceful termination.
 
 :author:     direct Netware Group et al.
 :copyright:  direct Netware Group - All rights reserved
 :package:    dpt
 :subpackage: threading
-:since:      v1.0.0
+:since:      v2.0.0
 :license:    https://www.direct-netware.de/redirect?licenses;mpl2
              Mozilla Public License, v. 2.0
     """
@@ -49,7 +49,7 @@ True if new non-daemon threads are allowed to be started.
         """
 python.org: Method representing the thread’s activity.
 
-:since: v1.0.0
+:since: v2.0.0
         """
 
         with ExceptionLogTrap("dpt_threading"): _Thread.run(self)
@@ -59,7 +59,7 @@ python.org: Method representing the thread’s activity.
         """
 python.org: Start the thread's activity.
 
-:since: v1.0.0
+:since: v2.0.0
         """
 
         if (self.daemon or Thread._active): _Thread.start(self)
@@ -71,7 +71,7 @@ python.org: Start the thread's activity.
         """
 Prevents new non-daemon threads to be started.
 
-:since: v1.0.0
+:since: v2.0.0
         """
 
         Thread._active = False
