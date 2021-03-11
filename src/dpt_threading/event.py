@@ -19,7 +19,7 @@ https://www.direct-netware.de/redirect?licenses;mpl2
 
 from threading import Event as _Event
 
-from dpt_settings import Settings
+from dpt_runtime import Settings
 
 class Event(object):
     """

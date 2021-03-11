@@ -21,7 +21,7 @@ from threading import Event, RLock
 from time import time
 
 from dpt_runtime.exceptions import IOException
-from dpt_settings import Settings
+from dpt_runtime import Settings
 
 class ThreadLock(object):
     """
