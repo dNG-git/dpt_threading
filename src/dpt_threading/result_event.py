@@ -34,7 +34,7 @@ class ResultEvent(Event):
              Mozilla Public License, v. 2.0
     """
 
-    __slots__ = [ "_result", "result_set" ]
+    __slots__ = ( "_result", "result_set" )
     """
 python.org: __slots__ reserves space for the declared variables and prevents
 the automatic creation of __dict__ and __weakref__ for each instance.
